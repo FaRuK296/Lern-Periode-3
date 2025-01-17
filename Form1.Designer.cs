@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1
+﻿namespace WinFormsAppTextAnzeigen
 {
     partial class Form1
     {
@@ -28,45 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblZahl = new Label();
-            button1 = new Button();
+            txtEingabe = new TextBox();
+            btnReveal = new Button();
+            lblReveal = new Label();
             SuspendLayout();
             // 
-            // lblZahl
+            // txtEingabe
             // 
-            lblZahl.AutoSize = true;
-            lblZahl.Location = new Point(361, 52);
-            lblZahl.Name = "lblZahl";
-            lblZahl.Size = new Size(59, 25);
-            lblZahl.TabIndex = 0;
-            lblZahl.Text = "label1";
+            txtEingabe.Location = new Point(261, 62);
+            txtEingabe.Name = "txtEingabe";
+            txtEingabe.Size = new Size(257, 31);
+            txtEingabe.TabIndex = 0;
+            txtEingabe.TextChanged += textBox1_TextChanged;
             // 
-            // button1
+            // btnReveal
             // 
-            button1.Location = new Point(319, 345);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnReveal.Location = new Point(297, 216);
+            btnReveal.Name = "btnReveal";
+            btnReveal.Size = new Size(201, 55);
+            btnReveal.TabIndex = 1;
+            btnReveal.Text = "reveal";
+            btnReveal.UseVisualStyleBackColor = true;
+            btnReveal.Click += btnReveal_Click;
+            // 
+            // lblReveal
+            // 
+            lblReveal.AutoSize = true;
+            lblReveal.BackColor = Color.White;
+            lblReveal.Location = new Point(288, 357);
+            lblReveal.Name = "lblReveal";
+            lblReveal.Size = new Size(210, 25);
+            lblReveal.TabIndex = 2;
+            lblReveal.Text = "Your text shows up here: ";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkBlue;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(lblZahl);
+            Controls.Add(lblReveal);
+            Controls.Add(btnReveal);
+            Controls.Add(txtEingabe);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label lblZahl;
-        private Button button1;
+        private TextBox txtEingabe;
+        private Button btnReveal;
+        private Label lblReveal;
     }
 }

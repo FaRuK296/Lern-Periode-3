@@ -1,4 +1,4 @@
-namespace WinFormsApp1
+namespace WinFormsAppTextAnzeigen
 {
     public partial class Form1 : Form
     {
@@ -7,11 +7,14 @@ namespace WinFormsApp1
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            Random random = new Random();
-            int zahl = random.Next(1, 101);
-            lblZahl.Text = "Zufallszahl: " + zahl;
+           
+        }
+
+        private void btnReveal_Click(object sender, EventArgs e)
+        {
+            lblReveal.Text = txtEingabe.Text;
         }
     }
 }
